@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages - AWS SQS & SNS Project</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: #4CAF50;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+
+    ul li:nth-child(odd) {
+      background-color: #eef9ee;
+    }
+
+    .info {
+      background-color: #e7f5e6;
+      border-left: 5px solid #4CAF50;
+      margin-bottom: 20px;
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 15px;
+      font-size: 1rem;
+      color: #4CAF50;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Messages from SQS Queue</h1>
+  </header>
+  <div class="container">
+    <div class="info">
+      <p>Below are the messages fetched from the SQS queue. If you received an email notification, you can review the related message here.</p>
+    </div>
+    <h2>Queue Messages</h2>
+    <ul>
+      <% if (messages.length > 0) { %>
+        <% messages.forEach(message => { %>
+          <li><strong>Message:</strong> <%= message.Body %></li>
+        <% }); %>
+      <% } else { %>
+        <li>No messages available in the queue.</li>
+      <% } %>
+    </ul>
+    <a href="/">← Back to Home</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS SQS Project</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 80vh;
+      padding: 20px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .intro h2 {
+      font-size: 1.8rem;
+      color: #4CAF50;
+    }
+
+    .intro p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 500px;
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 15px;
+      font-size: 1rem;
+      color: white;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AWS SQS Project</h1>
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/send">Send Message</a>
+    <a href="/messages">View Messages</a>
+  </nav>
+  <div class="container">
+    <div class="intro">
+      <h2>Welcome to the AWS SQS Project</h2>
+      <p>This application allows you to send and view messages using Amazon SQS and SNS. You can also receive email notifications for specific messages.</p>
+    </div>
+    <div class="card">
+      <h2>Send a Message</h2>
+      <p>Use the button below to navigate to the message sender page.</p>
+      <a href="/send" class="btn">Send Message</a>
+    </div>
+    <div class="card">
+      <h2>View Messages</h2>
+      <p>View messages retrieved from the SQS queue. Check if your message was successfully delivered.</p>
+      <a href="/messages" class="btn">View Messages</a>
+    </div>
+  </div>
+  <footer>
+    <p>© 2024 Sunil Kurthakoti | AWS SQS Project</p>
+    <p>Find the project on <a href="https://github.com/sunilkurthakoti" target="_blank">GitHub</a>.</p>
+  </footer>
+</body>
+</html>
